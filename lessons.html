@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lessons — From 1 TO 5 EN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">From 1 TO 5 EN</a>
+    <a class="active" href="lessons.html">Lessons</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="container">
+    <h1>Lessons</h1>
+
+    <section class="lesson">
+      <h2>Lesson 1 — Greetings</h2>
+      <ul>
+        <li>Hello / Hi</li>
+        <li>Good morning / Good afternoon / Good evening</li>
+        <li>How are you? — I’m fine, thank you.</li>
+      </ul>
+      <button class="btn" onclick="openQuiz(1)">Start Quiz</button>
+    </section>
+
+    <section class="lesson light">
+      <h2>Lesson 2 — Basic Verbs</h2>
+      <ul>
+        <li>to be (am/is/are)</li>
+        <li>to have</li>
+        <li>to go</li>
+      </ul>
+      <button class="btn ghost" onclick="openQuiz(2)">Start Quiz</button>
+    </section>
+
+    <section id="quiz-area" class="quiz" style="display:none;">
+      <h2 id="quiz-title">Quiz</h2>
+      <div id="quiz-content"></div>
+      <div class="quiz-actions">
+        <button class="btn" onclick="submitQuiz()">Submit</button>
+        <button class="btn ghost" onclick="closeQuiz()">Close</button>
+      </div>
+      <p id="score" class="score"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Good luck! ⭐</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
