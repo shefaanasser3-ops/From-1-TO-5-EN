@@ -86,4 +86,40 @@ function showLesson(index) {
     document.getElementById("translation").innerText = lesson.translation;
     document.getElementById("soundBtn").setAttribute("onclick", `playSound('${lesson.audio}')`);
 }
+// نطق الكلمة
+function speakWord(word) {
+    const msg = new SpeechSynthesisUtterance();
+    msg.text = word;
+    msg.lang = 'en-US';
+    window.speechSynthesis.speak(msg);
+}
+
+// مثال على مصفوفة الدروس
+const lessons = [
+    { word: "Hello", translation: "مرحبا" },
+    { word: "Apple", translation: "تفاحة" },
+    { word: "Goodbye", translation: "مع السلامة" },
+    // أضيفي باقي الكلمات هنا
+];
+
+let currentLesson = 0;
+
+function showLesson(index) {
+    const lesson = lessons[index];
+    document.querySelector(".word").innerText = lesson.word;
+    document.getElementById("translation").innerText = lesson.translation;
+}
+
+function nextLesson() {
+    if(currentLesson < lessons.length - 1) currentLesson++;
+    showLesson(currentLesson);
+}
+
+function prevLesson() {
+    if(currentLesson > 0) currentLesson--;
+    showLesson(currentLesson);
+}
+
+// تشغيل أول درس عند فتح الصفحة
+showLesson(currentLesson);
 
