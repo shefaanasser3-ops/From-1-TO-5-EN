@@ -66,4 +66,8 @@ button {
 button:hover {
     background-color: #ff69b4; /* وردي عند المرور بالفأرة */
 }
+.word {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
