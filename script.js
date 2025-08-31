@@ -68,3 +68,8 @@ function closeQuiz(){
   if(qa) qa.style.display = 'none';
   currentQuiz = null;
 }
+function playSound(word) {
+    var audio = new Audio('sounds/' + word + '.mp3');
+    audio.play();
+}
+
