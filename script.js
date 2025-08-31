@@ -72,4 +72,18 @@ function playSound(word) {
     var audio = new Audio('sounds/' + word + '.mp3');
     audio.play();
 }
+const lessons = [
+    { word: "Hello", translation: "مرحبا", audio: "hello.mp3" },
+    { word: "Apple", translation: "تفاحة", audio: "apple.mp3" },
+    // أضيفي باقي الكلمات هنا
+];
+
+let currentLesson = 0;
+
+function showLesson(index) {
+    const lesson = lessons[index];
+    document.getElementById("word").innerText = lesson.word;
+    document.getElementById("translation").innerText = lesson.translation;
+    document.getElementById("soundBtn").setAttribute("onclick", `playSound('${lesson.audio}')`);
+}
 
