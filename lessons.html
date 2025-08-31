@@ -55,3 +55,13 @@
   <script src="script.js"></script>
 </body>
 </html>
+<p id="word" class="word"></p>
+<p id="translation"></p>
+<button id="soundBtn">🔊</button>
+<br>
+<button onclick="currentLesson--; showLesson(currentLesson)">Prev</button>
+<button onclick="currentLesson++; showLesson(currentLesson)">Next</button>
+
+<script>
+showLesson(currentLesson); // لتظهر أول كلمة عند فتح الصفحة
+</script>
